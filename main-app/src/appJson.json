@@ -1,0 +1,14 @@
+{
+  "app1": {
+    "name": "app1",
+    "url": "http://localhost:8001"
+  },
+  "app2": {
+    "name": "app2",
+    "url": "http://localhost:8002"
+  },
+  "app3": {
+    "name": "app3",
+    "url": "http://localhost:8003"
+  }
+}

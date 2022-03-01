@@ -6,7 +6,7 @@ import singleSpaVue from 'single-spa-vue'
 
 Vue.config.productionTip = false
 
-const vueOptions = {
+const appOptions = {
   el: '#microApp',
   router,
   store,
@@ -14,31 +14,31 @@ const vueOptions = {
 }
 
 if (!window.singleSpaNavigate) {
-  delete vueOptions.el
-  new Vue(vueOptions).$mount('#app')
+  delete appOptions.el
+  new Vue(appOptions).$mount('#app')
 }
 
 const vueLifecycle = singleSpaVue({
   Vue,
-  vueOptions
+  appOptions
 })
 
-export function bootstrap (customProps) {
+export function bootstrap (customProps = {}) {
   console.log('app2: bootstrap')
   return vueLifecycle.bootstrap(customProps)
 }
 
-export function mount (customProps) {
+export function mount (customProps = {}) {
   console.log('app2: mount')
   return vueLifecycle.mount(customProps)
 }
 
-export function unmount (customProps) {
+export function unmount (customProps = {}) {
   console.log('app2: unmount')
   return vueLifecycle.unmount(customProps)
 }
 
-export function update (customProps) {
+export function update (customProps = {}) {
   console.log('app2: update')
   return vueLifecycle.update(customProps)
 }

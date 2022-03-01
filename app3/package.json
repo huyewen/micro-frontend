@@ -1,5 +1,5 @@
 {
-  "name": "app1",
+  "name": "app3",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "single-spa-vue": "^2.5.1",
+    "single-spa-vue": "^1.8.2",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"

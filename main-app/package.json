@@ -3,15 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "serve:micro": "vue-cli-service serve --mode micro",
+    "serve": "vue-cli-service serve --port 8000",
+    "serve:micro": "vue-cli-service serve --mode micro --port 8000",
     "build": "vue-cli-service build --mode buildMicro",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "single-spa": "^5.9.3",
-    "single-spa-vue": "^2.5.1",
+    "single-spa": "^5.5.5",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
