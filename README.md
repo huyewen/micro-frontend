@@ -1,12 +1,12 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
-import appInfo from './appJson.json'
-import { registerApplication, start } from './single-spa'
+# vue-micro-frontend
 
-Vue.config.productionTip = false
+在`main-app\src\single-spa\index.js`文件中，基于`single-spa`框架，实现了一个`mini-single-spa`，详情可看代码。
 
+目前，作为实例，都是以`@vue/cli`生成的vue项目作为各子应用的的基本框架，然后通过`single-spa-vue`对子应用主入口文件进行改造，使得子应用可以单独运行，也可以作为主应用中的一部分。
+
+`主应用基座`也是vue项目基本框架进行搭建，然后通过对入口文件进行改造。
+
+```
 function createScript (url) {
   return new Promise((resolve, reject) => {
     const script = document.createElement('script')
@@ -51,3 +51,7 @@ new Vue({
   },
   render: h => h(App)
 }).$mount('#app')
+
+```
+
+本身`single-spa`框架代码并不多，也不复杂，所以学起来很容易，经过对此的学习，在对进一步基于`single-spa`改进后的`qiankun`框架，理解起来会更加透彻，后面会进一步的学习`qiankun`框架的源码，然后作进一步的总结。
